@@ -33,7 +33,10 @@ For general safety, this tool has been broken down into 2 parts, collecting all 
 	py get_calls.py secrets/.env 3 2023 3 2025
 	```
 	Would start from the first of March, 2023 to the first of March, 2025.
-	
+
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
+
 [!IMPORTANT]
 Due to the limits of the Amazon Connect API, you only go up to 24 months back.
 	
