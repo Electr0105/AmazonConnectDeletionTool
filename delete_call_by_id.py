@@ -37,7 +37,7 @@ def list_s3_objects(bucket_name, prefix):
 
 def delete_matching_files(bucket_name, contact_ids, start_date, end_date):
     """Deletes S3 files that match Contact IDs within a date range."""
-    base_prefix = "connect/amtek/CallRecordings/"
+    base_prefix = os.getenv("PREFIX")
     files_deleted = 0
     # Loop through each day in the given date range
     current_date = start_date
