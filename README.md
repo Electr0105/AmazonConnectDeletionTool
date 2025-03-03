@@ -4,6 +4,7 @@ Using Amazon Connect and need to delete call recordings in bulk? Have fun doing 
 
 [!NOTE]
 Use are your own risk, this tool has the potential to delete any and all S3 files.
+
 ### Usage
 For general safety, this tool has been broken down into 2 parts, collecting all relevant call IDs and the record deletion based off of said IDs.
 
@@ -18,9 +19,9 @@ For general safety, this tool has been broken down into 2 parts, collecting all 
 
 2. Prep and activate your virtual environment with:
 ```
-py -m venv .venv
-.venv/Scripts/activate.ps1
-pip install -r requirements.txt
+    py -m venv .venv
+    .venv/Scripts/activate.ps1
+    pip install -r requirements.txt
 ```
 
 3. Generate your *call_id_list.csv* file by running the **get_calls.py** file
@@ -33,13 +34,13 @@ pip install -r requirements.txt
 	```
 	Would start from the first of March, 2023 to the first of March, 2025.
 	
-	[!IMPORTANT]
-	Due to the limits of the Amazon Connect API, you only go up to 24 months back.
+[!IMPORTANT]
+Due to the limits of the Amazon Connect API, you only go up to 24 months back.
 	
 4. Compare the returned results within *call_id_list.csv*, to call IDs you expect to see. Ensure that only the correct call IDs are included
 5. Run **delete_call_by_id.py**, with the same parameters as **get_calls.py**:
-	[!IMPORTANT]
-	**ENSURE THAT ONLY THE CORRECT CALL IDS ARE PRESENT**
+[!IMPORTANT]
+**ENSURE THAT ONLY THE CORRECT CALL IDS ARE PRESENT**
 ```
 	py delete_call_by_id.py path/to/env/file/.env start_month start_year end_month end_year
 ```
